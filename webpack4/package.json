@@ -1,0 +1,23 @@
+{
+  "name": "webpack4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "rimraf dist && mkdir dist && cp ./src/index.html dist && webpack -w --mode production --module-bind 'ts=ts-loader' --resolve-extensions .ts,.js",
+    "build": "webpack --mode production --module-bind 'ts=ts-loader' --resolve-extensions .ts,.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cp": "^0.2.0",
+    "mkdir": "0.0.2",
+    "rimraf": "^2.6.2",
+    "ts-loader": "^4.0.1",
+    "typescript": "^2.7.2",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
+  }
+}
